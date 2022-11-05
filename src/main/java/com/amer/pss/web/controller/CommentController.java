@@ -26,8 +26,8 @@ public class CommentController {
     @GetMapping
     public Collection<CommentDto> findAll(){
         List<CommentDto> commentDtoList = new ArrayList<>();
-        this.commentService.findAll().forEach(post -> {
-            commentDtoList.add(convertToCommentDto(post));
+        this.commentService.findAll().forEach(comment -> {
+            commentDtoList.add(convertToCommentDto(comment));
         });
         return commentDtoList;
     }
